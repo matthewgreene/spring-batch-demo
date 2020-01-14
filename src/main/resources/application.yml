@@ -1,5 +1,5 @@
-inputFile: ${inputFile}
-output-directory: ${outputDirectory}
+inputFile: data/pending/users.csv
+output-directory: data/processed
 
 spring:
   datasource:
