@@ -1,5 +1,5 @@
-inputFile: /Users/mgreene/Downloads/batch-demo/data/pending/users.csv
-output-directory: /Users/mgreene/Downloads/batch-demo/data/processed
+inputFile: ${inputFile}
+output-directory: ${outputDirectory}
 
 spring:
   datasource:
