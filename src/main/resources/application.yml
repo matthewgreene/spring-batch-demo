@@ -1,0 +1,10 @@
+inputFile: /Users/mgreene/Downloads/batch-demo/data/pending/users.csv
+output-directory: /Users/mgreene/Downloads/batch-demo/data/processed
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    platform: hibernate.dialect.H2Dialect
+    driver-class-name: org.h2.Driver
