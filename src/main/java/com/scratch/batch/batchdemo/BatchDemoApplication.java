@@ -10,21 +10,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BatchDemoApplication /*implements CommandLineRunner */{
-//	@Autowired
-//	private JobLauncher jobLauncher;
+public class BatchDemoApplication implements CommandLineRunner{
+	@Autowired
+	private JobLauncher jobLauncher;
 
-//	@Autowired
-//	@Qualifier("userJob")
-//	private Job userJob;
+	@Autowired
+	private Job userJob;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BatchDemoApplication.class, args);
 	}
 
-//	@Override
-//	public void run(String... args) throws Exception {
-//		JobParametersBuilder jobProperties = new JobParametersBuilder();
-//		jobLauncher.run(userJob, jobProperties.toJobParameters());
-//	}
+	@Override
+	public void run(String... args) throws Exception {
+		JobParametersBuilder jobProperties = new JobParametersBuilder();
+		jobLauncher.run(userJob, jobProperties.toJobParameters());
+	}
 }
